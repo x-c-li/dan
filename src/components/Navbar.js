@@ -3,8 +3,12 @@ import "./Navbar.scss";
 
 function Navbar() {
   return (
-    <div>
-      Dan's Repair <div>Services Contact Me</div>
+    <div className="Navbar">
+      <div className="navbar-logo">Dan's Repair</div>
+      <div className="navbar-links">
+        <div className="navbar-temp">Services</div>
+        <div className="navbar-temp">Contact Me</div>
+      </div>
     </div>
   );
 }
