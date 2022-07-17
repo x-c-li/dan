@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./ContactForm.scss";
 function ContactForm() {
   return (
-    <div class="container">
+    <div className="ContactForm" class="container">
       <form action="action_page.php">
         <label>First Name</label>
         <input
@@ -11,6 +11,7 @@ function ContactForm() {
           name="firstname"
           placeholder="Your Name..."
         ></input>
+
         <label for="lname">Last Name</label>
         <input
           type="text"
@@ -18,6 +19,7 @@ function ContactForm() {
           name="lastname"
           placeholder="Your last name.."
         ></input>
+
         <label for="email">Email Address</label>
         <input
           type="text"
