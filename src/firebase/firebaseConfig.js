@@ -1,7 +1,8 @@
-import firebase from "firebase/app"; // doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
-import "firebase/auth";
-import "firebase/database";
-import "firebase/firestore";
+import firebase from "firebase/compat/app"; //doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
+import "firebase/compat/auth";
+import "firebase/compat/database";
+import "firebase/compat/firestore";
+
 import Axios from "axios";
 
 // Initialize Firebase
