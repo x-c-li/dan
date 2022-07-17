@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContactForm.scss";
 import { db } from "../firebase/firebaseConfig";
 
@@ -14,6 +14,7 @@ function ContactForm() {
     e.preventDefault();
     setLoader(true);
 
+    //db collection in firebase - we named it contacts here
     db.collection("contacts")
       .add({
         fname: fname,
@@ -48,6 +49,7 @@ function ContactForm() {
           id="fname"
           name="firstname"
           placeholder="Your first name..."
+          value={fname}
           onChange={(e) => setLname(e.target.value)}
         ></input>
 
@@ -57,6 +59,7 @@ function ContactForm() {
           id="lname"
           name="lastname"
           placeholder="Your last name.."
+          value={lname}
           onChange={(e) => setLname(e.target.value)}
         ></input>
 
@@ -66,6 +69,7 @@ function ContactForm() {
           id="email"
           name="email"
           placeholder="Your email address..."
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
 
@@ -74,6 +78,7 @@ function ContactForm() {
           id="message"
           name="message"
           placeholder="Write something..."
+          value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
 
