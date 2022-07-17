@@ -14,8 +14,8 @@ let config = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 };
 
-firebase.initializeApp(config);
-
-const db = firebase.firestore();
+const firebaseApp = firebase.initializeApp(config);
+const db = firebaseApp.firestore(); //youtube tutorial
+// const db = firebase.firestore(); //website tutorial
 
 export { Axios, db };

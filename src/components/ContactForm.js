@@ -1,5 +1,7 @@
 import React from "react";
 import "./ContactForm.scss";
+import { db } from "../firebase/firebaseConfig";
+
 function ContactForm() {
   return (
     <div className="container">
@@ -38,7 +40,8 @@ function ContactForm() {
           placeholder="Write something..."
         ></textarea>
 
-        <input type="submit" value="Submit"></input>
+        {/* <input type="submit" value="Submit"></input> */}
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
