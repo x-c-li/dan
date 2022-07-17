@@ -3,8 +3,7 @@ import "./ContactForm.scss";
 import { db } from "../firebase/firebaseConfig";
 
 function ContactForm() {
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -15,24 +14,22 @@ function ContactForm() {
     setLoader(true);
 
     //db collection in firebase - we named it contacts here
-    db.collection("contacts")
+    db.collection("email")
       .add({
-        fname: fname,
-        lname: lname,
+        name: name,
         email: email,
         message: message,
       })
       .then(() => {
         setLoader(false);
-        alert("Your message has been submitted👍");
+        alert("Your message has been submitted");
       })
       .catch((error) => {
         alert(error.message);
         setLoader(false);
       });
 
-    setFname("");
-    setLname("");
+    setName("");
     setEmail("");
     setMessage("");
   };
@@ -43,27 +40,17 @@ function ContactForm() {
         <div className="form-title">
           <label>Contact Me</label>
         </div>
-        <label>First Name</label>
+        <label>Name</label>
         <input
           type="text"
-          id="fname"
-          name="firstname"
-          placeholder="Your first name..."
-          value={fname}
-          onChange={(e) => setLname(e.target.value)}
+          id="name"
+          name="name"
+          placeholder="Your name.."
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         ></input>
 
-        <label for="lname">Last Name</label>
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="Your last name.."
-          value={lname}
-          onChange={(e) => setLname(e.target.value)}
-        ></input>
-
-        <label for="email">Email Address</label>
+        <label>Email Address</label>
         <input
           type="text"
           id="email"
@@ -73,7 +60,7 @@ function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
         ></input>
 
-        <label for="subject">Message</label>
+        <label>Message</label>
         <textarea
           id="message"
           name="message"
@@ -82,7 +69,6 @@ function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
 
-        {/* <input type="submit" value="Submit"></input> */}
         <button
           style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
           type="submit"
