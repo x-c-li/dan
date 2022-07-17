@@ -2,8 +2,11 @@ import React from "react";
 import "./ContactForm.scss";
 function ContactForm() {
   return (
-    <div class="container">
+    <div className="container">
       <form className="ContactForm" action="action_page.php">
+        <div className="form-title">
+          <label>Contact Me</label>
+        </div>
         <label>First Name</label>
         <input
           type="text"
