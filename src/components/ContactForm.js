@@ -27,13 +27,11 @@ function ContactForm() {
         ></input>
 
         <label for="subject">Message</label>
-
-        {/* <textarea
-          id="subject"
-          name="subject"
-          placeholder="Write something.."
-          style="height:200px"
-        ></textarea> */}
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write something..."
+        ></textarea>
 
         <input type="submit" value="Submit"></input>
       </form>
