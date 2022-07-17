@@ -2,8 +2,8 @@ import React from "react";
 import "./ContactForm.scss";
 function ContactForm() {
   return (
-    <div className="ContactForm" class="container">
-      <form action="action_page.php">
+    <div class="container">
+      <form className="ContactForm" action="action_page.php">
         <label>First Name</label>
         <input
           type="text"
