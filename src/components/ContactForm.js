@@ -7,20 +7,12 @@ function ContactForm() {
         <div className="form-title">
           <label>Contact Me</label>
         </div>
-        <label>First Name</label>
+        <label>Name</label>
         <input
           type="text"
-          id="fname"
-          name="firstname"
+          id="name"
+          name="name"
           placeholder="Your Name..."
-        ></input>
-
-        <label for="lname">Last Name</label>
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="Your last name.."
         ></input>
 
         <label for="email">Email Address</label>
