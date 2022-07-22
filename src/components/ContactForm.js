@@ -7,7 +7,11 @@ function ContactForm() {
         <div className="form-title">
           <label>Contact Me</label>
         </div>
-        <label>Name</label>
+
+        <h3>Email: dan@dan.com</h3>
+        <h3>Phone Number: 306-123-4567</h3>
+        <h3>Address: 123 Street St, Saskatoon SK</h3>
+        {/* <label>Name</label>
         <input
           type="text"
           id="name"
@@ -30,7 +34,7 @@ function ContactForm() {
           placeholder="Write something..."
         ></textarea>
 
-        <input type="submit" value="Submit"></input>
+        <input type="submit" value="Submit"></input> */}
       </form>
     </div>
   );
