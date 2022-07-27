@@ -1,4 +1,4 @@
-.service-container{
+.service-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
   border-radius: 5px;
@@ -7,14 +7,17 @@
   margin: 4em;
   padding: 4em;
 
-
-  .serviceBox{
+  .serviceBox {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .image-box{
+  .image-box {
     border: 3px solid white;
     height: 200px;
     width: 80%;
@@ -30,7 +33,7 @@
     margin: auto;
   }
 
-  .service-price{
+  .service-price {
     display: flex;
     flex-direction: column;
     align-items: center;
