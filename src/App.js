@@ -9,8 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      Dan's site in test
-        <Services/>
+      <Services />
       <ContactForm />
     </div>
   );
