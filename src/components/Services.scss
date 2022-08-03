@@ -4,8 +4,8 @@
   border-radius: 5px;
   gap: 10px;
   background-color: #f2f2f2;
-  margin: 4em;
-  padding: 4em;
+  margin: 2em;
+  padding: 2em;
 
   .serviceBox {
     text-align: left;
@@ -19,46 +19,50 @@
     .serviceList {
       // padding-right: 2em;
       border-right: solid black;
-      background-color: red;
+      // background-color: red;
       width: 50%;
-      padding: 1em;
+      padding: 1em 1em 1em 1em;
     }
 
     .brandList {
-      background-color: pink;
+      // background-color: pink;
       width: 50%;
-      padding: 1em;
+      padding: 1em 1em 1em 3em;
       // flex-direction: column;
       // display: flex;
       // flex-wrap: wrap;
 
       .BL {
-        border: 2px solid green;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        // justify-content: space-around;
+        justify-content: flex-start;
+        // border: 2px solid green;
 
         .brandNames {
           display: flex;
           // flex-direction: row;
           flex-wrap: wrap;
-          padding: 0.5em;
-          border: 2px solid red;
+          // padding: 0.5em;
+          // border: 2px solid red;
 
           .image-box {
-            border: 3px solid white;
-            height: 80px;
+            height: 100px;
+            width: 100px;
             align-self: center;
             margin-top: 2px;
-            border: 2px solid blue;
+            // border: 2px solid blue;
+            padding: 0em 1em 2em 0em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
 
             img {
               object-fit: cover;
               height: 100%;
               align-items: center;
               margin: auto;
-              border: 2px solid black;
+              // border: 2px solid black;
             }
           }
         }
