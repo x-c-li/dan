@@ -1,7 +1,10 @@
 .Navbar {
-  background-color: #123d82;
+  background-color: white;
   padding: 0.5em 2em;
+  // margin: 0.5em 2em;
   height: 80px;
+  width: 100vw;
+  border-bottom: 5px solid rgb(160, 160, 160);
 
   //flexbox
   display: flex;
@@ -9,7 +12,7 @@
   align-items: center;
 
   //text related css
-  color: white;
+  color: black;
 
   .navbar-logo {
     font-size: x-large;
@@ -18,14 +21,14 @@
     margin: 0.5em;
   }
 
-  .navbar-links {
-    display: flex;
-    align-items: baseline;
-    align-items: center;
-    padding-left: 3em;
+  // .navbar-links {
+  //   display: flex;
+  //   align-items: baseline;
+  //   align-items: center;
+  //   padding-left: 3em;
 
-    .navbar-temp {
-      margin-left: 1em;
-    }
-  }
+  //   .navbar-temp {
+  //     margin-left: 1em;
+  //   }
+  //}
 }
