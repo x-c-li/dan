@@ -5,8 +5,8 @@ function Brands(props) {
   return (
     <div className="brandNames">
       <div className="brandIndivid">
-        <div>{props.name}</div>
         <div className="image-box">
+          <div>{props.name}</div>
           <img src={props.image} />
         </div>
       </div>
