@@ -1,6 +1,6 @@
 .service-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  // grid-template-columns: auto auto auto auto;
   border-radius: 5px;
   gap: 10px;
   background-color: #f2f2f2;
@@ -8,35 +8,61 @@
   padding: 4em;
 
   .serviceBox {
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
-    font-size: 30px;
+    font-size: 20px;
 
     display: flex;
     justify-content: center;
-    flex-direction: column;
-  }
+    flex-direction: row;
 
-  .image-box {
-    border: 3px solid white;
-    height: 200px;
-    width: 80%;
-    align-self: center;
-    margin-top: 2px;
-  }
+    .serviceList {
+      // padding-right: 2em;
+      border-right: solid black;
+      background-color: red;
+      width: 50%;
+      padding: 1em;
+    }
 
-  .image-box img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    margin: auto;
-  }
+    .brandList {
+      background-color: pink;
+      width: 50%;
+      padding: 1em;
+      // flex-direction: column;
+      // display: flex;
+      // flex-wrap: wrap;
 
-  .service-price {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
+      .BL {
+        border: 2px solid green;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // justify-content: space-around;
+
+        .brandNames {
+          display: flex;
+          // flex-direction: row;
+          flex-wrap: wrap;
+          padding: 0.5em;
+          border: 2px solid red;
+
+          .image-box {
+            border: 3px solid white;
+            height: 80px;
+            align-self: center;
+            margin-top: 2px;
+            border: 2px solid blue;
+
+            img {
+              object-fit: cover;
+              height: 100%;
+              align-items: center;
+              margin: auto;
+              border: 2px solid black;
+            }
+          }
+        }
+      }
+    }
   }
 }
