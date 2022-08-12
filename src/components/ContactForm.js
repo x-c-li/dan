@@ -38,7 +38,7 @@ function ContactForm() {
     <div className="container">
       <form
         className="ContactForm"
-        action="https://formsubmit.co/a69aa978cd7f2af9071bd0bbee8d0fe3"
+        action={process.env.REACT_APP_FORMSUBMIT_CODE}
         method="POST"
       >
         <div className="form-title">
