@@ -1,46 +1,40 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import "./ContactForm.scss";
-// import { db } from "../firebase/firebaseConfig";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
+  const form = useRef();
 
-  // const [loader, setLoader] = useState(false);
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLoader(true);
-
-  //   //db collection in firebase - we named it contacts here
-  //   db.collection("email")
-  //     .add({
-  //       name: name,
-  //       email: email,
-  //       message: message,
-  //     })
-  //     .then(() => {
-  //       setLoader(false);
-  //       alert("Your message has been submitted");
-  //     })
-  //     .catch((error) => {
-  //       alert(error.message);
-  //       setLoader(false);
-  //     });
-
-  //   setName("");
-  //   setEmail("");
-  //   setMessage("");
-  // };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        // console.log(typeof process.env.REACT_APP_EMAILJS_SERVICE_ID),
+        // console.log("serviceID", process.env.REACT_APP_EMAILJS_SERVICE_ID),
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        // console.log(typeof process.env.REACT_APP_EMAILJS_TEMPLATE_ID),
+        // console.log("templateid", process.env.REACT_APP_EMAILJS_TEMPLATE_ID),
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        // console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY),
+        // console.log(typeof process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Message Sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div className="container">
-      <form
-        className="ContactForm"
-        action={process.env.REACT_APP_FORMSUBMIT_CODE}
-        method="POST"
-      >
+      <form className="ContactForm" ref={form} onSubmit={sendEmail}>
         <div className="form-title">
           <label>Contact Me</label>
         </div>
@@ -48,36 +42,28 @@ function ContactForm() {
         <input
           type="text"
           id="name"
-          name="name"
+          name="user_name" //must match template in emailjs
           placeholder="Your name.."
-          // value={name}
-          // onChange={(e) => setName(e.target.value)}
-        ></input>
+        />
 
         <label>Email Address</label>
         <input
           type="text"
           id="email"
-          name="email"
+          name="user_email"
           placeholder="Your email address..."
           required
-          // value={email}
-          // onChange={(e) => setEmail(e.target.value)}
-        ></input>
+        />
 
         <label>Message</label>
         <textarea
           id="message"
           name="message"
           placeholder="Write something..."
-          // value={message}
-          // onChange={(e) => setMessage(e.target.value)}
+          required
         ></textarea>
 
-        <button
-          // style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
-          type="submit"
-        >
+        <button type="submit" value="Send">
           Submit
         </button>
       </form>
