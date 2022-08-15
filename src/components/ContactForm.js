@@ -38,13 +38,18 @@ function ContactForm() {
         <div className="form-title">
           <label>Contact Me</label>
         </div>
+
+
+        <h3>Email: dan@dan.com</h3>
+        <h3>Phone Number: 306-123-4567</h3>
+        <h3>Address: 123 Street St, Saskatoon SK</h3>
         <label>Name</label>
         <input
           type="text"
           id="name"
           name="user_name" //must match template in emailjs
           placeholder="Your name.."
-        />
+        />  
 
         <label>Email Address</label>
         <input
@@ -66,6 +71,7 @@ function ContactForm() {
         <button type="submit" value="Send">
           Submit
         </button>
+
       </form>
     </div>
   );
