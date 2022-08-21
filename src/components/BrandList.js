@@ -3,20 +3,28 @@ import "./Services.scss";
 
 import Brands from "./Brands";
 
-import apple from "../components/imgs/logo_apple.png";
+import appleLogo from "../components/imgs/logo-apple.png";
+import acerLogo from "../components/imgs/logo-acer.png";
+import asusLogo from "../components/imgs/logo-asus.png";
+import hpLogo from "../components/imgs/logo-hp.png";
+import lenovoLogo from "../components/imgs/logo-lenovo.png";
+import lgLogo from "../components/imgs/logo-lg.png";
+import predatorLogo from "../components/imgs/logo-predator.png";
+import rogLogo from "../components/imgs/logo-rog.png";
+import samsungLogo from "../components/imgs/logo-samsung.png";
 
 function BrandList() {
   const brands = [
-    { image: apple, name: "Apple" },
-    { image: apple, name: "Samsung" },
-    { image: apple, name: "LG" },
-    { image: apple, name: "Asus" },
-    { image: apple, name: "LOG" },
-    { image: apple, name: "Acer" },
-    { image: apple, name: "Predator" },
-    { image: apple, name: "Nitro" },
-    { image: apple, name: "Lenovo" },
-    { image: apple, name: "HP" },
+    { image: appleLogo, name: "Apple" },
+    { image: samsungLogo, name: "Samsung" },
+    { image: lgLogo, name: "LG" },
+    { image: asusLogo, name: "Asus" },
+    { image: rogLogo, name: "ROG" },
+    { image: acerLogo, name: "Acer" },
+    { image: predatorLogo, name: "Predator" },
+    { image: "no-logo", name: "Nitro" },
+    { image: lenovoLogo, name: "Lenovo" },
+    { image: hpLogo, name: "HP" },
   ];
   const item = brands.map((item) => {
     return (
