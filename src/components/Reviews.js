@@ -17,8 +17,11 @@ function Reviews(props) {
         </ReactReadMoreReadLess>
       </div>
       <div className="reviews-reviewer-info">
-        <div className="reviews-name">{props.name}</div>
-        <div className="reviews-date">{props.date}</div>
+        <div>
+          <div className="reviews-name">{props.name}</div>
+          <div className="reviews-date">{props.date}</div>
+        </div>
+        <img className="reviews-img" src={props.avatar} />
       </div>
     </div>
   );

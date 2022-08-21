@@ -19,7 +19,9 @@
     }
   }
   .reviews-reviewer-info {
-
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     .reviews-name {
       font-size:large;
       text-align: right;
@@ -28,6 +30,15 @@
     .reviews-date {
       font-size: large;
       text-align: right;
+      margin-bottom: 0.2em;
+    }
+    .reviews-img {
+      background-color: white;
+      margin: 0.2em;
+      margin-left: 0.7em;
+      border-radius: 50%;
+      padding: 0.5em;
+      height: 35px;
     }
   }
 }
