@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "better-react-carousel";
 import Reviews from "./Reviews";
+import "./ReviewList.scss";
+
 function ReviewList(props) {
   const reviews = [
     {
@@ -31,7 +33,7 @@ function ReviewList(props) {
       date: "March 45, 2847",
       name: "Rebecca",
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor nulla, aliquam quis vulputate id, dapibus non eros. Maecenas blandit sagittis elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec facilisis vestibulum semper. Quisque sed lectus porta, fringilla purus semper, iaculis purus. In justo nulla, dapibus tempus posuere accumsan, tincidunt ac tellus. Ut tempor lacus sit amet dolor tincidunt facilisis. Sed vel dolor bibendum, facilisis massa sit amet, pharetra orci. Praesent mattis vestibulum orci eget aliquet. Praesent euismod sit amet justo nec ultrices. Maecenas volutpat laoreet felis, non consectetur nisl. Praesent mauris ante, venenatis quis maximus vitae, fringilla eu metus.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor nulla, aliquam quis vulputate id, dapibus non eros. Maecenas blandit sagittis elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec facilisis vestibulum semper. Quisque sed lectus porta, fringilla purus semper, iaculis purus. In justo nulla, dapibus tempus posuere accumsan, tincidunt ac tellus. Ut tempor lacus sit amet dolor tincidunt facilisis. Sed vel dolor bibendum, facilisis massa sit amet, pharetra orci. Praesent mattis vestibulum orci eget aliquet. Praesent euismod sit amet justo nec ultrices. Maecenas volutpat laoreet feli",
     },
     {
       date: "March 45, 2847",
@@ -56,8 +58,9 @@ function ReviewList(props) {
   // });
 
   return (
-    <div>
-      <Carousel cols={3} rows={1} gap={5} loop>
+    <div className="ReviewList">
+      <h1>Customer Reviews</h1>
+      <Carousel cols={3} rows={1} gap={5} loop showDots>
         {reviews.map((review) => (
           <Carousel.Item>
             <Reviews
