@@ -22,13 +22,14 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+
     .reviews-name {
       font-size:large;
       text-align: right;
 
     }
     .reviews-date {
-      font-size: large;
+      font-size: medium;
       text-align: right;
       margin-bottom: 0.2em;
     }
