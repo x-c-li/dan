@@ -35,11 +35,11 @@ function ContactForm() {
   return (
     <div className="container">
       <div className="contact-info">
-        <label>Contact Me</label>
+        <h1>Contact Me</h1>
 
-        <h3>Email: dan@dan.com</h3>
-        <h3>Phone Number: 306-123-4567</h3>
-        <h3>Address: 123 Street St, Saskatoon SK</h3>
+        <p>Email: dan@dan.com</p>
+        <p>Phone Number: 306-123-4567</p>
+        <p>Address: 123 Street St, Saskatoon SK</p>
         <h3>Mail in Instructions</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis
@@ -51,6 +51,7 @@ function ContactForm() {
         </p>
       </div>
       <form className="ContactForm" ref={form} onSubmit={sendEmail}>
+        <h1>Email Me</h1>
         <label>Name</label>
         <input
           type="text"
