@@ -4,17 +4,19 @@
   background-color: #f2f2f2;
   margin: 4em;
   padding: 4em;
+  display: flex;
+
+  .contact-info {
+    padding: 1em;
+    border-right: solid black;
+    width: 50%;
+  }
 
   .ContactForm {
     // background: #d2d3d6;
     // border: red;
-    width: 100%;
-
-    .form-title {
-      font-size: x-large;
-      font-weight: bold;
-      margin-bottom: 1em;
-    }
+    width: 50%;
+    padding: 2em;
 
     /* Style inputs with type="text", select elements and textareas */
     input[type="text"],

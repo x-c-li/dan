@@ -1,60 +1,33 @@
 import "./Services.scss";
+import BrandList from "./BrandList";
+import Brands from "./Brands";
 
 function Services() {
-    return (<div className="service-container">
-
-
-            <div className="serviceBox">
-                <h3>ServiceOne</h3>
-                <div className="image-box">
-                    <img
-                        src="https://images.unsplash.com/photo-1518534543674-5933a2307dca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                        alt="thumbnail"/>
-                </div>
-                <div className="service-price">
-                    <h4>$4.20</h4>
-                </div>
-
-            </div>
-            <div className="serviceBox">
-                <h3>ServiceTwo</h3>
-                <div className="image-box">
-                    <img
-                        src="https://images.unsplash.com/photo-1518534543674-5933a2307dca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                        alt="thumbnail"/>
-                </div>
-                <div className="service-price">
-                    <h4>$4.20</h4>
-                </div>
-
-            </div>
-            <div className="serviceBox">
-                <h3>ServiceThree</h3>
-                <div className="image-box">
-                    <img
-                        src="https://images.unsplash.com/photo-1518534543674-5933a2307dca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                        alt="thumbnail"/>
-                </div>
-                <div className="service-price">
-                    <h4>$4.20</h4>
-                </div>
-
-            </div>
-            <div className="serviceBox">
-                <h3>ServiceFour</h3>
-                <div className="image-box">
-                    <img
-                        src="https://images.unsplash.com/photo-1518534543674-5933a2307dca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                        alt="thumbnail"/>
-                </div>
-                <div className="service-price">
-                    <h4>$4.20</h4>
-                </div>
-
-            </div>
-
+  return (
+    <div className="service-container">
+      <div className="serviceBox">
+        <div className="serviceList">
+          <h4>Services:</h4>
+          <ul>
+            <li>Liquid damage repair</li>
+            <li>No power repair</li>
+            <li>Device randomly restarting</li>
+            <li>Motherboard/logic board repair</li>
+          </ul>
+          <div>
+            <h4>Warranty</h4>
+            <p>Work warranty: 90 days</p>
+            <p>Part warranties: 90 days (withstanding no physical damage)</p>
+          </div>
         </div>
-    )
+
+        <div className="brandList">
+          <h4>Brands:</h4>
+          <BrandList />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Services;
