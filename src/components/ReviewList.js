@@ -63,14 +63,6 @@ function ReviewList(props) {
     },
   ];
 
-  // const review = reviews.map((review) => {
-  //   return (
-  //     <div>
-  //       <Reviews date={review.date} name={review.name} review={review.review} />
-  //     </div>
-  //   );
-  // });
-
   return (
     <div className="ReviewList">
       <h1>Customer Reviews</h1>
@@ -88,7 +80,6 @@ function ReviewList(props) {
       </Carousel>
     </div>
   );
-  // return <div>{review}</div>;
 }
 
 export default ReviewList;

@@ -22,7 +22,6 @@ function BrandList() {
     { image: rogLogo, name: "ROG" },
     { image: acerLogo, name: "Acer" },
     { image: predatorLogo, name: "Predator" },
-    { image: "no-logo", name: "Nitro" },
     { image: lenovoLogo, name: "Lenovo" },
     { image: hpLogo, name: "HP" },
   ];
