@@ -6,7 +6,7 @@ function Brands(props) {
     <div className="brandNames">
       <div className="brandIndivid">
         <div className="image-box">
-          <div>{props.name}</div>
+          {/* <div>{props.name}</div> */}
           <img src={props.image} />
         </div>
       </div>
