@@ -1,9 +1,27 @@
+@media (max-width: 465px) {
+  .reviews-reviewer-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  .Reivews {
+    min-height: 29em
+  }
+
+}
+
+@media (max-width: 1008px) {
+  .Reviews {
+    min-height: 15em;
+  }
+}
+
 .Reviews {
   background-color: black;
   color: white;
   margin: 2em;
   padding: 1em;
-  min-height: 9em;
+  min-height: 10em;
 
   display: flex;
   flex-direction: column;
@@ -15,24 +33,30 @@
     .read-more {
       font: normal normal normal 16px/18px;
       letter-spacing: 0px;
-      color: #0460a9;
+      color: white;
     }
   }
+
   .reviews-reviewer-info {
     display: flex;
+    flex-direction: rows;
     align-items: flex-end;
     justify-content: flex-end;
-
-    .reviews-name {
-      font-size:large;
-      text-align: right;
-
+    margin-top: 0.5em;
+    
+    .person-info {
+      .reviews-name {
+        font-size: large;
+        text-align: right;
+  
+      }
+      .reviews-date {
+        font-size: medium;
+        text-align: right;
+        margin-bottom: 0.2em;
+      }
     }
-    .reviews-date {
-      font-size: medium;
-      text-align: right;
-      margin-bottom: 0.2em;
-    }
+   
     .reviews-img {
       background-color: white;
       margin: 0.2em;

@@ -17,7 +17,7 @@ function Reviews(props) {
         </ReactReadMoreReadLess>
       </div>
       <div className="reviews-reviewer-info">
-        <div>
+        <div className="person-info">
           <div className="reviews-name">{props.name}</div>
           <div className="reviews-date">{props.date}</div>
         </div>

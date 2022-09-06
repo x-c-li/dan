@@ -66,7 +66,7 @@ function ReviewList(props) {
   return (
     <div className="ReviewList">
       <h1>Customer Reviews</h1>
-      <Carousel cols={3} rows={1} gap={5} loop showDots>
+      <Carousel cols={3} rows={1} gap={2} loop showDots>
         {reviews.map((review) => (
           <Carousel.Item>
             <Reviews
