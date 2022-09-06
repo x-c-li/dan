@@ -7,14 +7,7 @@
   display: flex;
   flex-direction: column;
 
-  
-
-  .contact-info {
-    padding: 1em;
-  }
-
   .ContactForm {
-    padding: 1em;
 
     /* Style inputs with type="text", select elements and textareas */
     input[type="text"],
@@ -60,6 +53,6 @@
   
   .ContactForm {
     width: 50%;
-    padding-left: 3em;
+    padding-left: 2em;
   }
 }
