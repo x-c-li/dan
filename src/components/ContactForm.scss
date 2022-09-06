@@ -1,24 +1,20 @@
-/* Add a background color and some padding around the form */
 .container {
+  margin-top: 1em;
   border-radius: 5px;
   background-color: #f2f2f2;
-  margin: 4em;
-  padding: 4em;
+  // margin: 4em;
+  padding: 3em;
   display: flex;
+  flex-direction: column;
+
+  
 
   .contact-info {
     padding: 1em;
-    padding-right: 2em;
-    border-right: solid black;
-    width: 50%;
   }
 
   .ContactForm {
-    // background: #d2d3d6;
-    // border: red;
-    width: 50%;
     padding: 1em;
-    padding-left: 3em;
 
     /* Style inputs with type="text", select elements and textareas */
     input[type="text"],
@@ -48,5 +44,22 @@
     button[type="submit"]:hover {
       background-color: #123d82;
     }
+  }
+}
+
+@media (min-width: 1008px) {
+  .container {
+    flex-direction: row;
+  }
+  
+  .contact-info{
+    width: 50%;
+    padding-right: 2em;
+    border-right: solid black;
+  }
+  
+  .ContactForm {
+    width: 50%;
+    padding-left: 3em;
   }
 }

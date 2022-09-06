@@ -9,9 +9,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Services />
-      <ReviewList />
-      <ContactForm />
+      <div className="notNav-components">
+        <Services />
+        <ReviewList />
+        <ContactForm />
+      </div>
     </div>
   );
 }
