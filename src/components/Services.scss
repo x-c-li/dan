@@ -1,4 +1,7 @@
 @media (min-width: 1008px) {
+  .service-container {
+    padding: 4em;
+  }
   .serviceBox{
     display: flex;
     flex-direction: row;
@@ -19,6 +22,9 @@
 }
 
 @media (min-width: 641) {
+  .service-container {
+    padding: 2em;
+  }
   .serviceBox{
     display: flex;
     flex-direction: column;
@@ -28,8 +34,8 @@
 .service-container {
   border-radius: 5px;
   gap: 10px;
+  padding: 1em;
   background-color: #f2f2f2;
-  padding: 4em;
   margin-bottom: 2em;
 
   .serviceBox {
